@@ -1,7 +1,7 @@
 // API Service - Connects to Express backend
 // Falls back to localStorage simulation when backend is unavailable
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const DOMAIN = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = `${DOMAIN}/api`;
 
 class ApiService {
   constructor() {
