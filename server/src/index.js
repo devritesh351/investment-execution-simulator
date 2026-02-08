@@ -20,8 +20,24 @@ app.set('trust proxy', 1);
 
 // Security middleware
 app.use(helmet());
+const allowedOrigins = [
+  "http://localhost:5173",             // Always allow local development
+  process.env.CLIENT_URL               // Allow the production URL defined in Railway variables
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps, curl, or Postman)
+    if (!origin) return callback(null, true);
+
+    // Check if the incoming origin matches one of our allowed origins
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+  },
   credentials: true
 }));
 
