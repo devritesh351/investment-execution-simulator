@@ -60,10 +60,10 @@ async function start() {
     await connectDB();
     console.log('✓ Database connected');
     
-    app.listen(PORT, () => {
-      console.log(`✓ Server running on port ${PORT}`);
-      console.log(`  Environment: ${process.env.NODE_ENV || 'development'}`);
-    });
+    app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✓ Server running on port ${PORT}`);
+  console.log(`  Environment: ${process.env.NODE_ENV || 'development'}`);
+});
   } catch (err) {
     console.error('Failed to start server:', err);
     process.exit(1);
