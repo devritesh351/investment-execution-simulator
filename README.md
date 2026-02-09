@@ -13,6 +13,13 @@
 > **Note**: The live demo connects to a real PostgreSQL database on Railway. If the backend sleeps, it automatically falls back to localStorage so you can still test the UI.
 
 A fullstack web application demonstrating how different financial assets (Mutual Funds, Stocks, Crypto) are processed through their respective state machines. Built with React, Node.js/Express, and PostgreSQL.
+##Screenshots
+<img width="1912" height="869" alt="Image" src="https://github.com/user-attachments/assets/be1767f2-2f09-4c77-9423-9fb6c1cede1b" />
+<img width="1919" height="836" alt="Image" src="https://github.com/user-attachments/assets/82913a53-7371-4b1f-94d4-bb4600cb3ac6" />
+<img width="1919" height="859" alt="Image" src="https://github.com/user-attachments/assets/e68f94d3-43d6-40e9-a3dd-dc65b6ce9321" />
+<img width="1917" height="831" alt="Image" src="https://github.com/user-attachments/assets/61a6d4be-645d-4fe4-b454-9701ac67db4c" />
+<img width="1919" height="811" alt="Image" src="https://github.com/user-attachments/assets/fee4818e-b1e8-4444-9b8c-461e7448a49c" />
+<img width="1918" height="864" alt="Image" src="https://github.com/user-attachments/assets/9dff2be2-f4e7-4941-98f4-d060bcacf38f" />
 
 ## Features
 
